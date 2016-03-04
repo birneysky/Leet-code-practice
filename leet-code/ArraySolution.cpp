@@ -8,6 +8,16 @@
 
 #include "ArraySolution.hpp"
 
+ArraySolution::~ArraySolution()
+{
+    cout << "~ArraySolution" << endl;
+}
+
+ArraySolution::ArraySolution()
+{
+    
+}
+
 //使用STL
 long ArraySolution::removeDuplicates1(vector<int>& nums)
 {
@@ -196,4 +206,86 @@ size_t ArraySolution::removeDuplicates3(vector<int>& nums)
         }
     }
     return index;
+}
+
+/*
+ |(index = 0)
+ |
+ ▽
+ 1  1  1  2  3  3  4  5  (i 和 i -1相等并且i 和i+1相等，i++）
+    △
+    |
+    |(i = 2)(i > 0 && i < size - 1)
+ 
+ |(index = 0)
+ |
+ ▽
+ 1  1  1  2  3  3  4  5  (如果不能满足（i 和 i -1相等并且i 和i+1相等）array[++index] = array[i];i++）;
+       △
+       |
+       |(i = 2)(i > 0 && i < size - 1)
+ 
+    |(index = 1)
+    |
+    ▽
+ 1  1  1  2  3  3  4  5  (如果不能满足（i 和 i -1相等并且i 和i+1相等）array[++index] = array[i];i++）;
+          △
+          |
+          |(i = 2)(i > 0 && i < size - 1)
+ 
+       |(index = 2)
+       |
+       ▽
+ 1  1  2  2  3  3  4  5  (如果不能满足（i 和 i -1相等并且i 和i+1相等）array[++index] = array[i];i++）;
+             △
+             |
+             |(i = 2)(i > 0 && i < size - 1)
+ 
+          |(index = 3)
+          |
+          ▽
+ 1  1  2  3  3  3  4  5  (如果不能满足（i 和 i -1相等并且i 和i+1相等）array[++index] = array[i];i++）;
+                △
+                |
+                |(i = 2)(i > 0 && i < size - 1)
+ 
+             |(index = 4)
+             |
+             ▽
+ 1  1  2  3  3  3  4  5  (如果不能满足（i 和 i -1相等并且i 和i+1相等）array[++index] = array[i];i++）;
+                   △
+                   |
+                   |(i = 2)(i > 0 && i < size - 1)
+ 
+                |(index = 5)
+                |
+                ▽
+ 1  1  2  3  3  4  4  5  (如果不能满足（i 和 i -1相等并且i 和i+1相等 && i > 0 && i < size - 1）array[++index] = array[i];i++）;
+                      △
+                      |
+                      |(i = 2)(i > 0 && i < size - 1)
+ 
+                   |(index = 6)
+                   |
+                   ▽
+ 1  1  2  3  3  4  5  5  (如果不能满足（i 和 i -1相等并且i 和i+1相等 && i > 0 && i < size - 1）array[++index] = array[i];i++）;
+                         △
+                         |
+                         |(i = 2)(i > 0 && i < size - 1)
+ 
+ */
+
+int ArraySolution::removeDuplicates4(vector<int>& nums)
+{
+    size_t n = nums.size();
+    
+    int index = 0;
+    for (int i = 1; i < n; i++) {
+        if (i > 0 && i < n -1 && nums[i] == nums[i - 1] && nums[i] == nums[i+1]) {
+            continue;
+        }
+        
+        nums[++index]  = nums[i];
+    }
+    return  index + 1;
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DBEE37FC1C892FDD00C2C31E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEE37FB1C892FDD00C2C31E /* main.m */; };
+		DBEE37FC1C892FDD00C2C31E /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = DBEE37FB1C892FDD00C2C31E /* main.mm */; };
 		DBEE38041C89327900C2C31E /* ArraySolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBEE38021C89327900C2C31E /* ArraySolution.cpp */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		DBEE37F81C892FDC00C2C31E /* leet-code */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "leet-code"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBEE37FB1C892FDD00C2C31E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBEE37FB1C892FDD00C2C31E /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		DBEE38021C89327900C2C31E /* ArraySolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArraySolution.cpp; sourceTree = "<group>"; };
 		DBEE38031C89327900C2C31E /* ArraySolution.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArraySolution.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +60,7 @@
 		DBEE37FA1C892FDC00C2C31E /* leet-code */ = {
 			isa = PBXGroup;
 			children = (
-				DBEE37FB1C892FDD00C2C31E /* main.m */,
+				DBEE37FB1C892FDD00C2C31E /* main.mm */,
 				DBEE38021C89327900C2C31E /* ArraySolution.cpp */,
 				DBEE38031C89327900C2C31E /* ArraySolution.hpp */,
 			);
@@ -124,7 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBEE38041C89327900C2C31E /* ArraySolution.cpp in Sources */,
-				DBEE37FC1C892FDD00C2C31E /* main.m in Sources */,
+				DBEE37FC1C892FDD00C2C31E /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
