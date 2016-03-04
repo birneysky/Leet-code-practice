@@ -7,3 +7,19 @@
 //
 
 #include "ArraySolution1.hpp"
+
+
+ArraySolution1::ArraySolution1()
+{
+    
+}
+
+ArraySolution1::~ArraySolution1()
+{
+    
+}
+
+int ArraySolution1::search(const vector<int>& nums, int target)
+{
+    return 0;
+}
