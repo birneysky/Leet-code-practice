@@ -36,9 +36,75 @@ long ArraySolution::removeDuplicates1(vector<int>& nums)
  4 循环结束
  
  算法思想：
-    首先由一个指针指向数组起始位置，然后循环遍历数组，用该指针指向的元素跟数组中的每一个元素比较，
-    如果如果不相等
+    首先由一个指针指向数组起始位置(index = 0)，然后循环遍历数组，用该指针指向的元素跟数组中的每一个元素比较，
+    如果如果不相等（如果这个元素是a[3]）,指针指向下一个元素(++index)，并且将a[3]的值赋值给当前指针指向的元素。
+ 
+|(index = 0)
+|
+▽
+1  1  2 3 3 4 5  (比较index 和 i 所表示的值，相等，i++)
+△
+|
+|(i = 0)
+ 
+|(index = 0)
+|
+▽
+1  1  2 3 3 4 5  (比较index 和 i 所表示的值，相等，i++)
+   △
+   |
+   |(i = 1)
+ 
+ |(index = 0)
+ |
+ ▽
+ 1  1  2 3 3 4 5  (比较index 和 i 所表示的值，不等，array[++index] = array[i];i++)
+       △
+       |
+       |(i = 2)
+ 
+    |(index = 1)
+    |
+    ▽
+ 1  2  2  3  3  4  5  (比较index 和 i 所表示的值，不等，array[++index] = array[i];i++)
+          △
+          |
+          |(i = 3)
+ 
+       |(index = 2)
+       |
+       ▽
+ 1  2  3  3  3  4  5  (比较index 和 i 所表示的值，相等，i++)
+             △
+             |
+             |(i = 4)
+ 
+       |(index = 2)
+       |
+       ▽
+ 1  2  3  3  3  4  5  (比较index 和 i 所表示的值，不等，array[++index] = array[i];i++)
+                △
+                |
+                |(i = 5)
+ 
+          |(index = 3)
+          |
+          ▽
+ 1  2  3  4  3  4  5  (比较index 和 i 所表示的值，不等，array[++index] = array[i];i++)
+                   △
+                   |
+                   |(i = 6)
+ 
+             |(index = 3)
+             |
+             ▽
+ 1  2  3  4  5  4  5  (比较index 和 i 所表示的值，不等，array[++index] = array[i];i++)
+                     △
+                     |
+                     |(i = 7)
+ 
  */
+
 int ArraySolution::removeDuplicates2(vector<int>& nums)
 {
     if (nums.empty()) {
