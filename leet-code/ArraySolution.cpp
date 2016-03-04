@@ -120,8 +120,3 @@ int ArraySolution::removeDuplicates2(vector<int>& nums)
     
     return index + 1;
 }
-
-int ArraySolution::removeDuplicates3(vector<int>& nums)
-{
-    return 0;
-}
