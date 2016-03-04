@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DBEE37FC1C892FDD00C2C31E /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = DBEE37FB1C892FDD00C2C31E /* main.mm */; };
 		DBEE38041C89327900C2C31E /* ArraySolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBEE38021C89327900C2C31E /* ArraySolution.cpp */; };
+		DBEE38071C89801F00C2C31E /* ArraySolution1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBEE38051C89801F00C2C31E /* ArraySolution1.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		DBEE37FB1C892FDD00C2C31E /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		DBEE38021C89327900C2C31E /* ArraySolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArraySolution.cpp; sourceTree = "<group>"; };
 		DBEE38031C89327900C2C31E /* ArraySolution.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArraySolution.hpp; sourceTree = "<group>"; };
+		DBEE38051C89801F00C2C31E /* ArraySolution1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArraySolution1.cpp; sourceTree = "<group>"; };
+		DBEE38061C89801F00C2C31E /* ArraySolution1.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArraySolution1.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				DBEE37FB1C892FDD00C2C31E /* main.mm */,
 				DBEE38021C89327900C2C31E /* ArraySolution.cpp */,
 				DBEE38031C89327900C2C31E /* ArraySolution.hpp */,
+				DBEE38051C89801F00C2C31E /* ArraySolution1.cpp */,
+				DBEE38061C89801F00C2C31E /* ArraySolution1.hpp */,
 			);
 			path = "leet-code";
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBEE38041C89327900C2C31E /* ArraySolution.cpp in Sources */,
+				DBEE38071C89801F00C2C31E /* ArraySolution1.cpp in Sources */,
 				DBEE37FC1C892FDD00C2C31E /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
