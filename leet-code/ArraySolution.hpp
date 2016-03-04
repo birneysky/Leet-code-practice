@@ -31,6 +31,10 @@ public:
      */
     long removeDuplicates1(vector<int>& nums);
     int removeDuplicates2(vector<int>& nums);
+    /*
+     根据上面”删除重复的元素功能“，实现最多允许重复两次的功能；
+     */
+    size_t removeDuplicates3(vector<int>& nums);
 };
 
 

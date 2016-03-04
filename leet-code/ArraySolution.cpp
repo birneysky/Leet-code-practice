@@ -120,3 +120,80 @@ int ArraySolution::removeDuplicates2(vector<int>& nums)
     
     return index + 1;
 }
+
+/*最多允许重复两次
+  加入一个变量记录一下元素出现的次数。因为是已经排序的数组，所以一个变量即可解决。
+  如果是没有排序的数组，则需要引入一个hashmap来记录出现的次数。
+ 
+ 
+
+       |(index = 2)
+       |
+       ▽
+ 1  1  1  2  3  3  4  5  (比较index - 2  和 i 所表示的值，相等，i++)
+       △
+       |
+       |(i = 2)
+ 
+       |(index = 2)
+       |
+       ▽
+ 1  1  1  2  3  3  4  5  (比较index - 2 和 i 所表示的值，不等，array[index++] = array[i];i++)
+          △
+          |
+          |(i = 3)
+ 
+          |(index = 3)
+          |
+          ▽
+ 1  1  2  2  3  3  4  5  (比较index - 2 和 i 所表示的值，不等，array[index++] = array[i];i++)
+             △
+             |
+             |(i = 4)
+ 
+             |(index = 4)
+             |
+             ▽
+ 1  1  2  3  3  3  4  5  (比较index - 2 和 i 所表示的值，不等，array[index++] = array[i];i++)
+                △
+                |
+                |(i = 5)
+ 
+                |(index = 5)
+                |
+                ▽
+ 1  1  2  3  3  3  4  5  (比较index - 2 和 i 所表示的值，不等，array[index++] = array[i];i++)
+                   △
+                   |
+                   |(i = 6)
+ 
+                   |(index = 6)
+                   |
+                   ▽
+ 1  1  2  3  3  4  4  5  (比较index - 2 和 i 所表示的值，不等，array[index++] = array[i];i++)
+                      △
+                      |
+                      |(i = 7)
+ 
+                      |(index = 7)
+                      |
+                      ▽
+ 1  1  2  3  3  4  5  5 (比较index - 2 和 i 所表示的值，不等，array[index++] = array[i];i++)
+                         △
+                         |
+                         |(i = 8)
+ */
+size_t ArraySolution::removeDuplicates3(vector<int>& nums)
+{
+    if (nums.size() < 2) {
+        return nums.size();
+    }
+    
+    int index = 2;
+    for ( int i = 2; i < nums.size(); i++) {
+        if (nums[index - 2] != nums[i]) {
+            nums[index++] = nums[i];
+        }
+    }
+    return index;
+}
