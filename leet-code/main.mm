@@ -14,6 +14,9 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
+        for (int i = 0 ; i < argc; i++) {
+            NSLog(@"arg%d = %s",i,argv[i]);
+        }
         int array[] = {1,  1,  1,  2,  3, 3,  4,  5  };
         int count = sizeof(array) / sizeof(int);
         vector<int>* num = new vector<int>(array,array + count);
