@@ -39,8 +39,59 @@ ArraySolution1::~ArraySolution1()
        |
        |(mid = 2)
  
+ 
+ |(first)                |(last )
+ |                       |
+ ▽                       ▽
+ 7  6  5  4  3  2  1  0
+             △
+             |
+             |(mid)
+ 
+             |(first)    |(last )
+             |           |
+             ▽           ▽
+ 7  6  5  4  3  2  1  0
+             △
+             |
+             |(mid)
+ 
+ 
  */
 int ArraySolution1::search(const vector<int>& nums, int target)
 {
-    return 0;
+    size_t first = 0;
+    size_t last = nums.size();
+    while (first <= last) {
+        size_t mid = first + (last - first) / 2;
+        if (nums[mid] == target) {
+            return nums[mid];
+        }
+        else if (nums[first] <= nums[mid]){//升序
+            if ( target >= nums[first] && target < nums[mid]) {
+                last = mid;
+            }
+            else
+            {
+                first = mid + 1;
+            }
+        }
+        else{//降序
+            if (target >=nums[last - 1]  && target < nums[mid]) {
+                first = mid + 1;
+            }
+            else
+            {
+                last = mid;
+            }
+        }
+    }
+    
+    return -1;
 }
+
+/*
+ 递归法
+ */
+
+
