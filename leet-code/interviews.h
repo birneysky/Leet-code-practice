@@ -89,4 +89,22 @@
     [self.mutableArray removeObjectAtIndex:0];
  4. 如何让自定义类使用copy修饰符？ 如何冲洗带copy关键字的setter？
     4.1 如果想让自己的类具有拷贝功能，则需要实现NSCopying协议，该协议只有一个方法- (id)copyWithZone:(NSZone *)zone;
+ 5. @property 的本质是什么？实例变量和读写方法是如何被添加到这个类中的？
+    property 的本质就是实例变量和存取方法。
+    property的主要作用是封装对象中的数据。oc通常会把其所需要的数据保存为各种实例变量。实例变量一般通过存取方法来访问。
+    完成属性定义后，编译器会自动编写访问这些属性所需的方法。这个过程是由编译器在编译期执行。
+    除了生成存取方法之外，编译器还要向类中添加适当类型的实例变量，并且在属性前面加下划线，以此作为实例变量的名字。
+         1.OBJC_IVAR_$类名$属性名称 ：该属性的“偏移量” (offset)，这个偏移量是“硬编码” (hardcode)，表示该变量距离存放对象的内存区域的起始地址有多远。
+         2.setter 与 getter 方法对应的实现函数
+         3.ivar_list ：成员变量列表
+         4.method_list ：方法列表
+         5.prop_list ：属性列表
+    每增加一个属性，系统都会在ivar_list添加一个成员变量的描述，在method_list增加setter/getter方法的描述，在属性列表中增加一个属性的描述，然后计算该属性的偏移量
+    然后给出 setter 与 getter 方法对应的实现,在 setter 方法中从偏移量的位置开始赋值,在 getter 方法中从偏移量开始取值,为了能够读取正确字节数,系统对象偏移量的指针类型进行了类型强转.
+ 6. @protocol 和 category 中如何使用 @property
+    6.1 如果在protocol使用属性只会生成setter和getter方法声明，是协议中使用属性的目的是希望遵守协议的对象能够实现该属性。
+    6.2 category 也只会生成setter和getter方法声明，如果真的要给category增加属性的实现，需要借助于两个运行时函数
+            objc_setAssociatedObject
+            objc_getAssociatedObject
+ 7. runtime 如何实现weak属性？
  */
