@@ -10,4 +10,24 @@
 
 @implementation interviews
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
+- (instancetype)mutableCopyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
+- (id)copy
+{
+    return [super copy];
+}
+
+- (id)mutableCopy
+{
+    return [super mutableCopy];
+}
+
 @end
