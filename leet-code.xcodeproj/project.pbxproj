@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		74E0117E1C9996C800F897E0 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0117D1C9996C800F897E0 /* Test.m */; };
+=======
+		DBEB1D541C9BAF7F00D004C5 /* interviews.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEB1D531C9BAF7F00D004C5 /* interviews.m */; };
+>>>>>>> 97d4fdeddd8a0c2091c23e7c43d5b864cf5bf4b9
 		DBEE37FC1C892FDD00C2C31E /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = DBEE37FB1C892FDD00C2C31E /* main.mm */; };
 		DBEE38041C89327900C2C31E /* ArraySolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBEE38021C89327900C2C31E /* ArraySolution.cpp */; };
 		DBEE38071C89801F00C2C31E /* ArraySolution1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBEE38051C89801F00C2C31E /* ArraySolution1.cpp */; };
@@ -26,8 +30,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		74E0117C1C9996C800F897E0 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		74E0117D1C9996C800F897E0 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+=======
+		DBEB1D521C9BAF7F00D004C5 /* interviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interviews.h; sourceTree = "<group>"; };
+		DBEB1D531C9BAF7F00D004C5 /* interviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = interviews.m; sourceTree = "<group>"; };
+>>>>>>> 97d4fdeddd8a0c2091c23e7c43d5b864cf5bf4b9
 		DBEE37F81C892FDC00C2C31E /* leet-code */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "leet-code"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBEE37FB1C892FDD00C2C31E /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		DBEE38021C89327900C2C31E /* ArraySolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArraySolution.cpp; sourceTree = "<group>"; };
@@ -71,8 +80,13 @@
 				DBEE38031C89327900C2C31E /* ArraySolution.hpp */,
 				DBEE38051C89801F00C2C31E /* ArraySolution1.cpp */,
 				DBEE38061C89801F00C2C31E /* ArraySolution1.hpp */,
+<<<<<<< HEAD
 				74E0117C1C9996C800F897E0 /* Test.h */,
 				74E0117D1C9996C800F897E0 /* Test.m */,
+=======
+				DBEB1D521C9BAF7F00D004C5 /* interviews.h */,
+				DBEB1D531C9BAF7F00D004C5 /* interviews.m */,
+>>>>>>> 97d4fdeddd8a0c2091c23e7c43d5b864cf5bf4b9
 			);
 			path = "leet-code";
 			sourceTree = "<group>";
@@ -137,6 +151,7 @@
 				74E0117E1C9996C800F897E0 /* Test.m in Sources */,
 				DBEE38071C89801F00C2C31E /* ArraySolution1.cpp in Sources */,
 				DBEE37FC1C892FDD00C2C31E /* main.mm in Sources */,
+				DBEB1D541C9BAF7F00D004C5 /* interviews.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
