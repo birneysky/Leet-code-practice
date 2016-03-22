@@ -107,4 +107,32 @@
             objc_setAssociatedObject
             objc_getAssociatedObject
  7. runtime 如何实现weak属性？
+ 8. @property中有哪些属性关键字？/ @property 后面可以有哪些修饰符？
+    8.1 原子性 nonatomic
+    8.2 内存管理 strong weak copy assign
+    8.3 读写权限 readwrite readonly
+    8.4 方法名 getter=<name> setter=<name>  @property (nonatomic,assign,getter=isOn) BOOL On;
+ 9. @synthesize和@dynamic分别有什么作用？
+    @synthesize 作用是如果没有写getter/setter，编译器会自动帮你加上这两个方法。如果 @synthesize和 @dynamic都没写，那么默认的就是@syntheszie var = _var;
+    @dynamic 就是要告诉编译器，代码中用@dynamic修饰的属性，其getter和setter方法会在程序运行的时候或者用其他方式动态绑定，以便让编译器通过编译。其主要的作用就是用在NSManagerObject对象的属性声明上，由于此类对象的属性一般是从Core Data的属性中生成的，core data 框架会在程序运行的时候为此类属性生成getter和setter方法。 
+ 
+ 10. ARC下，不显式指定任何属性关键字时，默认的关键字都有哪些?
+     基本类型默认关键字
+        atomic assign readwrite
+     oc对象默认关键字
+        atomic strong  readwrite
+ 
+ 11. 用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？
+      11.1 由于父类指针可以指向子类对象，使用copy时为了让该属性不受外界影响，无论传入的是一个可变对象还是不可变对象，实例变量持有的都是一个不可变的副本。
+      11.2 如果使用strong，那么该属性就有可能指向一个可变的对象，这样如果在外部修改了这个可变对象，就会影响属性的值
+ 12.@synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为_foo的实例变量，那么还会自动合成新变量么？
+     12.1 @synthesize 规则
+           12.1.1 如果是@synthesize foo = newName,会在生成一个newName的成员变量
+           12.1.2 如果没有使用@synthesize，不会再生成新的成员变量
+           12.1.3 如果是@synthesize foo = _foo; 不会再生成新的成员变量
+           12.1.4 如果是@synthesize foo；会生成一个名称为foo的成员变量 （如果没有指定成员变量的名称会自动生成一个属性同名的成员变量,）
+           12.1.5 如果没有使用@synthesize，并且类内部没有定义成员变量_foo，会自动东生成一个_foo成员变量
+           12.1.6 当你同时重写了 setter 和 getter 时，系统就不会生成成员变量。这是你又两个选择： 1 手动创建成员变量 2 @synthesize foo = _foo；
+ 
+ 
  */
