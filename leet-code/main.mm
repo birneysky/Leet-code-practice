@@ -11,6 +11,7 @@
 #include "ArraySolution.hpp"
 #include "ArraySolution1.hpp"
 #import "interviews.h"
+#include "Bird.hpp"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -66,6 +67,13 @@ int main(int argc, const char * argv[]) {
         interviews* obj2 = [obj1 copy];
         interviews* obj3 = [obj2 mutableCopy];
         NSLog(@"obj1 = %p, obj2 = %p,obj3 = %p",obj1,obj2,obj3);
+        
+        
+        Bird b;
+        b.show();
+        b.show(false);
+        
+        
         
     }
     return 0;
