@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7413ACEF1CD4B60200EDBAEC /* Animal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7413ACED1CD4B60200EDBAEC /* Animal.cpp */; };
+		7413ACF21CD4B6AA00EDBAEC /* Bird.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7413ACF01CD4B6AA00EDBAEC /* Bird.cpp */; };
 		748558371CA1892D005BECE8 /* ArraySolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7485582E1CA1892D005BECE8 /* ArraySolution.cpp */; };
 		748558381CA1892D005BECE8 /* ArraySolution1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 748558301CA1892D005BECE8 /* ArraySolution1.cpp */; };
 		748558391CA1892D005BECE8 /* interviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 748558331CA1892D005BECE8 /* interviews.m */; };
@@ -27,6 +29,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7413ACED1CD4B60200EDBAEC /* Animal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animal.cpp; sourceTree = "<group>"; };
+		7413ACEE1CD4B60200EDBAEC /* Animal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animal.hpp; sourceTree = "<group>"; };
+		7413ACF01CD4B6AA00EDBAEC /* Bird.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bird.cpp; sourceTree = "<group>"; };
+		7413ACF11CD4B6AA00EDBAEC /* Bird.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bird.hpp; sourceTree = "<group>"; };
 		748558231CA1882B005BECE8 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		7485582E1CA1892D005BECE8 /* ArraySolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArraySolution.cpp; sourceTree = "<group>"; };
 		7485582F1CA1892D005BECE8 /* ArraySolution.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArraySolution.hpp; sourceTree = "<group>"; };
@@ -78,6 +84,10 @@
 				748558341CA1892D005BECE8 /* main.mm */,
 				748558351CA1892D005BECE8 /* Test.h */,
 				748558361CA1892D005BECE8 /* Test.m */,
+				7413ACED1CD4B60200EDBAEC /* Animal.cpp */,
+				7413ACEE1CD4B60200EDBAEC /* Animal.hpp */,
+				7413ACF01CD4B6AA00EDBAEC /* Bird.cpp */,
+				7413ACF11CD4B6AA00EDBAEC /* Bird.hpp */,
 			);
 			path = "leet-code";
 			sourceTree = "<group>";
@@ -143,6 +153,8 @@
 				748558391CA1892D005BECE8 /* interviews.m in Sources */,
 				748558381CA1892D005BECE8 /* ArraySolution1.cpp in Sources */,
 				748558371CA1892D005BECE8 /* ArraySolution.cpp in Sources */,
+				7413ACF21CD4B6AA00EDBAEC /* Bird.cpp in Sources */,
+				7413ACEF1CD4B60200EDBAEC /* Animal.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
